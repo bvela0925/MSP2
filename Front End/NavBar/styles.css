@@ -26,12 +26,8 @@ nav a:hover {
 }
 
 img {
-    max-height: 75px;
-}
-
-.center-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 12vh;
+    max-height: 50px;
+    position: fixed;
+    top: 4px;
+    left: 515px;
 }
