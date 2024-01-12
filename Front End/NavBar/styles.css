@@ -1,5 +1,6 @@
 body {
     font-family: Arial, sans-serif;
+    font-size: 20px;
     margin: 0;
     padding: 0;
     background-color: #f8e2ce;
@@ -8,14 +9,19 @@ body {
 nav {
     background-color: #d7771d;
     color: white;
-    text-align: center;
-    padding: 10px;
+    height: 100vh;
+    width: 180px;
+    float: left;
+    display: inline;
+    margin: 0;
+    padding: 0;
+    margin-right: 10px;
 }
 
 nav a {
     text-decoration: none;
     color: #f6dac0;
-    padding: 10px 20px;
+    padding: 20px 30px;
     display: inline-block;
     margin-right: 10px;
 }
@@ -23,11 +29,10 @@ nav a {
 nav a:hover {
     background-color: #874b12;
     color: white;
+    width: 120px;
 }
 
 img {
-    max-height: 50px;
-    position: fixed;
-    top: 4px;
-    left: 515px;
+    max-height: 150px;
+    padding: 10px;
 }
