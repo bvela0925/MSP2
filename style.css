@@ -21,9 +21,9 @@ body {
 .wrapper {
   width: 420px;
   background: transparent;
-  border: 2px solid#D7771D(255, 255, 255, .2);
+  border: 2px solid rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(20px);
-  box-shadow: 0 0 10px #ECAE74(0, 0, 0, .2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   color: #F6DAC0;
   border-radius: 10px;
   padding: 30px 40px;
@@ -47,7 +47,7 @@ body {
   background: transparent;
   border: none;
   outline: none;
-  border: 2px solid #ECAE74(255, 255, 255, .2);
+  border: 2px solid rgba(255, 255, 255, 0.2);
   border-radius: 40px;
   font-size: 16px;
   color: #F6DAC0;
