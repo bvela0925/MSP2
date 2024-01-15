@@ -35,6 +35,8 @@ h1{
     font-family:'Abril Fatface';
     font-weight: bold;
     text-align: center;
+    margin: 0;
+    padding-top: 20px;
 }
 h2{
     font-family:'Roboto Slab',Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
