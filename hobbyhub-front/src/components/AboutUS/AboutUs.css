@@ -1,0 +1,95 @@
+.Aboutus {
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    gap: 4rem;
+    position: relative;
+    margin-top:4rem;
+   
+  }
+  
+  .Aboutus > div {
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+  }
+  .tname > h2 {
+    text-align: center;
+  }
+
+  .name > h3 {
+      font-size: 3rem;
+      background-color: red;
+      /* Create the gradient. */
+      background-image: var(--buttonBg);
+      text-align: center;
+      
+      /* Set the background size and repeat properties. */
+      background-size: 100%;
+      background-repeat: repeat;
+    
+      /* Use the text as a mask for the background. */
+      /* This will show the gradient as a text color rather than element bg. */
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent; 
+      -moz-background-clip: text;
+      -moz-text-fill-color: transparent;
+  }
+  .Aboutus .Aboutpara{
+    /* margin-right:20px;
+    margin-left:20px; */
+    text-align:justify;
+    max-width:1600px;
+    padding-right:10px;
+    padding-left:250px;
+  }
+  /* .Aboutus .h2{
+    text-align: center;
+  } 
+   */
+  /* .name>h6{
+      font-size: 0.85rem;
+  } */
+  html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+  .column {
+    float: left;
+    width: 20%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+  }
+  .row{
+    max-width:2000px;
+    padding-right:10px;
+    padding-left:250px;
+  }
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 8px;
+    border-radius: 10%;
+  }
+  
+.container {
+    padding: 0 16px;
+  }
+  
+  .container::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }

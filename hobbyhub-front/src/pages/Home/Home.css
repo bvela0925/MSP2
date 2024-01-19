@@ -1,7 +1,7 @@
 .Home{
     position: relative;
     display: grid;
-    grid-template-columns: 25rem auto 30rem;
+    grid-template-columns:5rem 28rem 55rem 20rem;
     gap: 1rem;
     /* grid-row-gap: 70px; */
 }

@@ -8,9 +8,10 @@
     background-color: var(--inputColor);
     border-radius: 10px;
     padding: 2px;
-    max-width: 220px; 
+    max-width:100%; 
     max-height: 40px;
-    margin-top: 60px;
+    margin-top: 20px;
+    margin-left: 80px;
 }
 
 .Search>input{
