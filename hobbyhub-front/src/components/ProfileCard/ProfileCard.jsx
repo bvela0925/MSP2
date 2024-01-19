@@ -1,9 +1,10 @@
 import React from "react";
-import Cover from "../../img/profileCover.webp";
+import Cover from "../../img/profileCover3.jpg";
 import Profile from "../../img/ThiliniProfile.jpg";
 import "./ProfileCard.css";
 
 const ProfileCard = () => {
+  const ProfilePage = true;
   return (
   <div className="ProfileCard">
     <div className="ProfileImages">
@@ -25,16 +26,20 @@ const ProfileCard = () => {
           <div className="follow">
             <span>4</span>
             <span>Followers</span>
-          </div>
+          </div>      
+          {ProfilePage && (
+            <>
               <div className="vl"></div>
               <div className="follow">
                 <span>3</span>
                 <span>Posts</span>
               </div>
+            </>
+          )}
         </div>
         <hr />
       </div>
-      <span>My Profile</span>
+      {<span>My Profile</span>}
     </div>
   
   )

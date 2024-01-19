@@ -6,6 +6,8 @@
     display: flex;
     flex-direction: column;
     font-size: 13px;
+    width:300px;
+    margin-left: 100px;
 }
 
 .follower{
@@ -21,8 +23,8 @@
 
 
 .followerImage{
-    width: 3.5rem;
-    height: 3.5rem;
+    width: 3.2rem;
+    height: 3.2rem;
     border-radius: 50%;
 }
 

@@ -1,0 +1,7 @@
+.Contact{
+    position: relative;
+    display: grid;
+    grid-template-columns:5rem auto;
+    gap: 1rem;
+    /* grid-row-gap: 70px; */
+}
