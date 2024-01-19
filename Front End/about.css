@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Roboto+Slab:wght@500&family=Source+Sans+Pro:wght@200;400;600&display=swap');
 body {
     font-family: Arial, sans-serif;
     font-size: 20px;
@@ -35,4 +36,32 @@ nav a:hover {
 .img_logo {
     max-height: 150px;
     padding: 10px;
+}
+
+h1{
+    font-family:'Abril Fatface';
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    padding-top: 20px;
+}
+
+hr{
+    height: 1px;
+    background-color:#E5E7E9;
+    border: none;
+}
+
+.about-us
+{
+    display:flex;  
+    margin-left: 200px;
+}
+
+p{
+    text-align:justify;
+}
+
+section{
+    padding:3%;
 }
