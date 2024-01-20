@@ -1,0 +1,62 @@
+.Blogs {
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    height: 200vh;
+    gap: 3rem;
+    position: relative;
+    margin-top:2rem;
+   
+  }
+  
+  .Blogs > div {
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+  }
+  p{
+    text-align:justify;
+    font-size: small;
+}
+
+  .name > h4 {
+      font-size: 3rem;
+      background-color: red;
+      /* Create the gradient. */
+      background-image: var(--buttonBg);
+      text-align: center;
+      
+      /* Set the background size and repeat properties. */
+      background-size: 100%;
+      background-repeat: repeat;
+    
+      /* Use the text as a mask for the background. */
+      /* This will show the gradient as a text color rather than element bg. */
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent; 
+      -moz-background-clip: text;
+      -moz-text-fill-color: transparent;
+  }
+  
+
+
+.more-articles
+{
+   display:flex;  
+   margin-left: 200px;
+}
+ section{
+    padding:3%;
+ }
+ .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 8px;
+    border-radius: 10%;
+  }
+
+  .BlogImg{
+    width:100%;
+    height: auto;
+    margin-left: 5rem;
+    margin-top: 30px;
+}

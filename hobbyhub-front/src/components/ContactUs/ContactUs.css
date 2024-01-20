@@ -1,24 +1,21 @@
-.Aboutus {
+.Contactus {
     /* display: flex; */
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    gap: 4rem;
+    height: 200vh;
+    gap: 3rem;
     position: relative;
-    margin-top:4rem;
+    margin-top:2rem;
    
   }
   
-  .Aboutus > div {
+  .Contactus > div {
     /* display: flex; */
     align-items: center;
     justify-content: center;
   }
-  .tname > h2 {
-    text-align: center;
-  }
 
-  .name > h3 {
+  .name > h4 {
       font-size: 3rem;
       background-color: red;
       /* Create the gradient. */
@@ -36,7 +33,7 @@
       -moz-background-clip: text;
       -moz-text-fill-color: transparent;
   }
-  .Aboutus .Aboutpara{
+  .Contactus .para{
     /* margin-right:20px;
     margin-left:20px; */
     text-align:justify;
@@ -44,13 +41,6 @@
     padding-right:10px;
     padding-left:250px;
   }
-  /* .Aboutus .h2{
-    text-align: center;
-  } 
-   */
-  /* .name>h6{
-      font-size: 0.85rem;
-  } */
   html {
     box-sizing: border-box;
   }
@@ -60,36 +50,37 @@
   
 .container {
   padding: 0 16px;
+  font-size: small;
+  gap: 1rem;
 }
 
-.container::after, .row::after {
+/* .container::after, .row::after {
   content: "";
   clear: both;
   display: table;
-}
+} */
   .column {
     float: left;
-    width: 20%;
-    margin-bottom: 16px;
+    width: 40%;
+    margin-bottom: 10px;
     padding: 0 8px;
   }
   .row{
-    max-width:2000px;
+    max-width:800px;
+    max-height:180px;
     padding-right:10px;
-    padding-left:250px;
+    padding-left:200px;
   }
   .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    margin: 8px;
-    border-radius: 10%;
+    margin: 4px;
+    margin-left: 50px;
+    /* border-radius:8%; */
   }
-  
-.container {
-    padding: 0 16px;
-  }
-  
-  .container::after, .row::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
+  .MemImg{
+    max-width: 50px; 
+    max-height: 50px;
+    margin-left: 1rem;
+    border-radius: 50%;
+    margin-top: 8px;
+}
