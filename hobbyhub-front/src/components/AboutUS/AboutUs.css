@@ -14,11 +14,12 @@
     align-items: center;
     justify-content: center;
   }
-  .tname > h2 {
-    text-align: center;
+  h2 {
+    text-align: left;
+    margin-left: 15rem;
   }
 
-  .name > h3 {
+  .name > h4 {
       font-size: 3rem;
       background-color: red;
       /* Create the gradient. */
@@ -44,13 +45,6 @@
     padding-right:10px;
     padding-left:250px;
   }
-  /* .Aboutus .h2{
-    text-align: center;
-  } 
-   */
-  /* .name>h6{
-      font-size: 0.85rem;
-  } */
   html {
     box-sizing: border-box;
   }
@@ -83,13 +77,11 @@
     margin: 8px;
     border-radius: 10%;
   }
-  
-.container {
-    padding: 0 16px;
-  }
-  
-  .container::after, .row::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
+
+  .MemImg{
+    max-width: 100px; 
+    max-height: 100px;
+    margin-left: 5rem;
+    border-radius: 50%;
+    margin-top: 30px;
+}

@@ -1,12 +1,16 @@
 import React from 'react'
 import './AboutUs.css'
+import Memb1 from '../../img/follower4.jpg'
+import Memb2 from '../../img/follower1.jpg'
+import Memb3 from '../../img/follower2.webp'
+import Memb4 from '../../img/ThiliniProfile.jpg'
 
 const AboutUs = () => {
   return (
 
       <div className="Aboutus">
         <div className="name">
-          <h3>About us</h3>
+          <h4>About us</h4>
           </div>
           <div className="Aboutpara">
             
@@ -42,18 +46,16 @@ const AboutUs = () => {
            <br>
            </br>
            <br>
-           </br>
-           <div name="tname">
+           </br> 
            <h2>Our Team</h2>
-           </div>
+           
 <div class="row">
 <div class="column">
     <div class="card">
-      <img src="/img/team1.jpg" alt="Eli" />
+    <img className="MemImg" src={Memb1} alt="Eli Ugolino" />
       <div class="container">
         <h4>Eli Ugolino</h4>
-        <p class="title">Project Leader</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p class="title">Project Manager</p>
         <p>eli@Hobbyhub.com</p>
       </div>
     </div>
@@ -61,23 +63,21 @@ const AboutUs = () => {
 
   <div class="column">
     <div class="card">
-      <img src="/img/team1.jpg" alt="Bobbie" />
+    <img className="MemImg" src={Memb2} alt="Bobbie Velazquez" />
       <div class="container">
         <h4>Bobbie Velazquee</h4>
         <p class="title">UI/UX Designer</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
         <p>bobbie@Hobbyhub.com</p>
       </div>
     </div>
   </div>
-
+  
   <div class="column">
     <div class="card">
-      <img src="/img/team1.jpg" alt="Ari" />
+    <img className="MemImg" src={Memb3} alt="Arianna Mireles" />
       <div class="container">
-      <h4>Arianna Mireles</h4>
-        <p class="title">Designer & Back-End Developer</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <h4>Arianna Mireles</h4>
+        <p class="title">Back-End Developer</p>
         <p>ari@Hobbyhub.com</p>
       </div>
     </div>
@@ -85,11 +85,10 @@ const AboutUs = () => {
 
   <div class="column">
     <div class="card">
-      <img src="/img/ThiliniProfile.jpg" alt="Thilini" />
+    <img className="MemImg" src={Memb4} alt="Thilini Dharma" />
       <div class="container">
         <h4>Thilini Dharmawardhana</h4>
         <p class="title">Front-End Developer</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
         <p>thilini@Hobbyhub.com</p>
       </div>
     </div>

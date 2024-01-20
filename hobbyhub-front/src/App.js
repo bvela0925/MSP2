@@ -1,9 +1,9 @@
 import "./App.css"
-//import Login from "./pages/Login/Login";
+import Login from "./pages/Login/Login";
 //import Home from "./pages/Home/Home";
 //import Profile from "./pages/Profile/Profile";
-//import Blogs from "./pages/Blogs/Blogs";
-import Contact from "./pages/Contact/Contact";
+//import Blog from "./pages/Blog/Blog";
+//import Contact from "./pages/Contact/Contact";
 //import About from "./pages/About/About";
 
 function App() {
@@ -13,10 +13,10 @@ function App() {
         <div className="blur" style={{top: '36%', left: '-8rem'}}></div>
         {/* <Home/>  */}
         {/* <Profile/> */}
-        {/* <Login/> */}
+        <Login/>
         {/* <About/> */}
-        {/* <Blogs/> */}
-        <Contact/>
+        {/* <Blog/> */}
+        {/* <Contact/> */}
     </div>
   );
 }
