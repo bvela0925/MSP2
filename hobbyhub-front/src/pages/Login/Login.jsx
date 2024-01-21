@@ -1,184 +1,170 @@
 import React, { useState } from "react";
 import "./Login.css";
 import Logo from "../../img/logo.webp";
-import { logIn, signUp } from "../../actions/LoginActions.js";
-import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
-
+//import { useDispatch, useSelector } from "react-redux";//import hook
 
 const Login = () => {
-    const initialState = {
+  //useState hooks-allows to add state to a functional component
+  const [isSignUp, setIsSignUp] = useState(false) //IsSign up false we are rendering our login page
+  //const dispatch = useDispatch();//instance of a hook
+
+  const [data, setData]=useState({
         firstname: "",
         lastname: "",
+        hobbies: "",
+        email: "",
         username: "",
         password: "",
         confirmpass: "",
-      };
-      const loading = useSelector((state) => state.loginReducer.loading);
-      const useNavigate = logIn();
-      const navigate = useNavigate();
-      const dispatch = useDispatch();//instance of a hook
-      const [isSignUp, setIsSignUp] = useState(false);
-    
-      const [data, setData] = useState(initialState);
-    
-      const [confirmPass, setConfirmPass] = useState(true);
-  // Reset Form
-  const resetForm = () => {
-    setData(initialState);
-    setConfirmPass(confirmPass);
-  };
+  });
 
-  // handle Change in input
-  const handleChange = (e) => {
-    setData({ ...data, [e.target.name]: e.target.value });//use single function for all our inputs
-  };
+  const [confirmPass, setConfirmPass] = useState(true);
 
-  // Form Submission
-  const handleSubmit = (e) => {
-    setConfirmPass(true);
-    e.preventDefault();
-    if (isSignUp) {
-      data.password === data.confirmpass
-        ? dispatch(signUp(data, navigate))
-        : setConfirmPass(false);
-    } else {
-      dispatch(logIn(data, navigate));
+// handle Change in input
+const handleChange = (e) => {
+  setData({ ...data, [e.target.name]: e.target.value });//use single function for all our inputs
+};
+
+// Form Submission
+const handleSubmit = (e) => {
+  e.preventDefault();
+  if (isSignUp) 
+  {
+    if(data.password !== data.confirmpass) //Intract with the actions of React Redux 
+    {
+      setConfirmPass(false)
     }
-  };
-    
+  }
+};
+
+const resetForm = () => {
+  setConfirmPass(true);
+  setData({
+        firstname: "",
+        lastname: "",
+        hobbies: "",
+        email: "",
+        username: "",
+        password: "",
+        confirmpass: "",
+});
+};
+
   return (
     <div className="Login">
-        {/* LeftSide with the logo and navbar */}
+{/* Left side with the logo and Navbar*/}
       <div className="a-left">
         <img src={Logo} alt="HobbyHUB custom logo shout out Ari!" />
         <div className="Webname">
           <h1>Hobby Hub</h1>
         </div>
       </div>
-        {/* rightside  */}
+{/* Right side */}
       <div className="a-right">
       <form className="infoForm loginForm" onSubmit={handleSubmit}>
-      <h3>{isSignUp ? "Register" : "Login"}</h3>
+      <h3>{isSignUp ? "Sign up" : "Log In"}</h3>
+        
           {isSignUp && (
-            <div>
-              <input
-                required
-                type="text"
-                placeholder="First Name"
-                className="infoInput"
-                name="firstname"
-                value={data.firstname}
-                onChange={handleChange}
-              />
-              <input
-                required
-                type="text"
-                placeholder="Last Name"
-                className="infoInput"
-                name="lastname"
-                value={data.lastname}
-                onChange={handleChange}
-              />
-            </div>
-          )}
-        <div>
+          <div>
+            <input
+            type="text"
+            placeholder="First Name"
+            className="infoInput"
+            name="firstname"
+            onChange={handleChange}
+            value={data.firstname}
+          />
           <input
-          required
+            type="text"
+            placeholder="Last Name"
+            className="infoInput"
+            name="lastname"
+            onChange={handleChange}
+            value={data.lastname}
+          />
+          </div>
+          )}
+          {isSignUp && (
+          <div>
+            <input
             type="text"
             className="infoInput"
             name="hobbies"
             placeholder="Hobbies"
+            onChange={handleChange}
             value={data.hobbies}
-            onChange={handleChange}
           />
-        </div>
-        <div>
+          </div>
+          )}
+          {isSignUp && (
+          <div>
           <input
-          required
-            type="text"
-            className="infoInput"
-            name="username"
-            placeholder="Username"
-            value={data.username}
-            onChange={handleChange}
-          />
-        </div>
-        <div>
-          <input
-          required
             type="text"
             className="infoInput"
             name="email"
             placeholder="Email"
-            value={data.email}
             onChange={handleChange}
+            value={data.email}
           />
         </div>
-
+        )}
+          
+          <div>
+            <input
+            type="text"
+            className="infoInput"
+            name="username"
+            placeholder="Username"
+            onChange={handleChange}
+            value={data.username}
+          />
+        </div>
         <div>
           <input
-          required
             type="password"
             className="infoInput"
             name="password"
             placeholder="Password"
-            value={data.password}
             onChange={handleChange}
+            value={data.password}
           />
-           {isSignUp && (
-          <input
+          {isSignUp && (
+         <input
             type="password"
             className="infoInput"
             name="confirmpass"
             placeholder="Confirm Password"
-            value={data.confirmpass}
             onChange={handleChange}
+            value={data.confirmpass}
           />
-           )}
-        </div>
-
-        <span
-            style={{
-              color: "red",
-              fontSize: "12px",
-              alignSelf: "flex-end",
-              marginRight: "5px",
-              display: confirmPass ? "none" : "block",
-            }}
-          >
-             *Confirm password is not same
+          )}
+          </div>
+        <span 
+        style={{display:confirmPass? "none": "block", 
+        color: 'red',
+        fontSize: '12px', 
+        alignSelf: "flex-end" ,
+         marginRight: "5px", display: confirmPass ? "none" : "block",
+        }}
+      >
+          * Confirm Password is not same
           </span>
-          <div>
+        <div>
             <span
-              style={{
-                fontSize: "12px",
-                cursor: "pointer",
-                textDecoration: "underline",
-              }}
-              onClick={() => {
-                resetForm();
-                setIsSignUp((prev) => !prev);
-              }}
-            >
-                {/* <span style={{fontSize: '14px'}}>Already have an account. Login!</span> */}
-              {isSignUp
-                ? "Already have an account Login"
-                : "Don't have an account Sign up"}
+             style={{fontSize: "12px", cursor:"pointer", color:"orange",textDecoration:"underline"}} 
+            onClick= {() => {setIsSignUp((prev) => !prev); resetForm()}}>
+              {isSignUp?
+                 "Already have an account. Login!":
+                 "Don't have an account? Sign Up"}
             </span>
-            
-            <button
-              className="button infoButton"
-              type="Submit"
-              disabled={loading}
-            >
-              {loading ? "Loading..." : isSignUp ? "SignUp" : "Login"}
-            </button>
-            </div>
+        </div>
+        <button className="button infoButton" type="submit">
+        {isSignUp ? "Sign Up": "Log In"}
+        </button>
       </form>
     </div>
-      {/* <LogIn/> 
-      <SignUp/> */}
+      {/* <LogIn/> */}
+      {/* <SignUp/> */}
     </div>
   );
 };
@@ -224,69 +210,7 @@ const Login = () => {
 //   }
 // function SignUp() {
 //   return (
-//     <div className="a-right">
-//       <form className="infoForm loginForm">
-//         <h3>Sign up</h3>
-//         <div>
-//           <input
-//             type="text"
-//             placeholder="First Name"
-//             className="infoInput"
-//             name="firstname"
-//           />
-//           <input
-//             type="text"
-//             placeholder="Last Name"
-//             className="infoInput"
-//             name="lastname"
-//           />
-//         </div>
-//         <div>
-//           <input
-//             type="text"
-//             className="infoInput"
-//             name="hobbies"
-//             placeholder="Hobbies"
-//           />
-//         </div>
-//         <div>
-//           <input
-//             type="text"
-//             className="infoInput"
-//             name="username"
-//             placeholder="Username"
-//           />
-//         </div>
-//         <div>
-//           <input
-//             type="text"
-//             className="infoInput"
-//             name="email"
-//             placeholder="Email"
-//           />
-//         </div>
-
-//         <div>
-//           <input
-//             type="text"
-//             className="infoInput"
-//             name="password"
-//             placeholder="Password"
-//           />
-//           <input
-//             type="text"
-//             className="infoInput"
-//             name="confirmpass"
-//             placeholder="Confirm Password"
-//           />
-//         </div>
-
-//         <div>
-//             <span style={{fontSize: '14px'}}>Already have an account. Login!</span>
-//         </div>
-//         <button className="button infoButton" type="submit">Sign up</button>
-//       </form>
-//     </div>
+    
 //   );
 // }
 

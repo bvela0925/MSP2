@@ -1,31 +1,27 @@
 import React, { useState} from "react";
-//import { NavLink } from 'react-router-dom'
+import {  Link } from "react-router-dom";
 import './NavBar.css'
 import Logo from '../../img/logo.webp'
 
 const NavBar = () => {
-//   const [showNavbar, setShowNavbar] = useState(false)
 
-//   const handleShowNavbar = () => {
-//     setShowNavbar(!showNavbar)
-//   }
   return (
     <nav>
     <img className="logoImg" src={Logo} alt="HobbyHUB custom logo shout out Ari!" />
 
     <div>
         <ul>
-          <li>
-            <a href="/">Home</a>
+        <li>
+          <Link to="/home">Home</Link>
           </li>
           <li>
-            <a href="/blog">Blog</a>
+          <Link to="/blog">Blog</Link>
           </li>
           <li>
-            <a href="/about">About</a>
+          <Link to="/about">About</Link>
           </li>
           <li>
-            <a href="/contact">Contact</a>
+          <Link to="/contact">Contact</Link>
           </li>
         </ul>
       </div>

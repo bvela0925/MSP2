@@ -33,11 +33,10 @@ nav a {
 nav a:hover {
     background-color: white;
     color:rgb(236, 116, 4);
-    width: 80px;
+    width: 100px;
 }
 .logoImg{
-    /* max-width: 48px; */
-    /* max-height: 48px; */
+   
     margin-right: 6px;
     margin-left:10px; 
     border-radius: 50%;
