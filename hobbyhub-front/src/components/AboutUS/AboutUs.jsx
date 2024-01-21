@@ -1,10 +1,9 @@
 import React from 'react'
 import './AboutUs.css'
-import Memb1 from '../../img/follower4.jpg'
-import Memb2 from '../../img/follower1.jpg'
-import Memb3 from '../../img/follower2.webp'
+import Memb1 from '../../img/EliProfile.webp'
+import Memb2 from '../../img/follower8.jpg'
+import Memb3 from '../../img/follower7.webp'
 import Memb4 from '../../img/ThiliniProfile.jpg'
-
 const AboutUs = () => {
   return (
 
@@ -12,16 +11,16 @@ const AboutUs = () => {
         <div className="name">
           <h4>About us</h4>
           </div>
-          <div className="Aboutpara">
+          <div>
             
-          <p><span> Welcome to <b>Hobby Hub</b>, where hobbies come to life! 🎨✨ For our <b>Milestone-2 </b>, 
+          <p className="Aboutpara"><span> Welcome to <b>Hobby Hub</b>, where hobbies come to life! 🎨✨ For our <b>Milestone-2 </b>, 
                 we decided to make an application to
                 create a community that brings people of all backgrounds into the 
                 world of creative hobbies with <b>Hobby Hub !</b>
           </span></p>
 
 
-            <p><span>
+            <p className="Aboutpara"><span>
             Our journey began with a shared love for creative hobbies, and we envisioned a space 
             that transcends boundaries, bringing people from diverse backgrounds together.
             Meet our dedicated team of enthusiasts, each driven by the belief that creativity
@@ -36,11 +35,11 @@ const AboutUs = () => {
             </span></p>
                       
                       
-            <p> <span>Join us on this exciting journey
+            <p className="Aboutpara"> <span>Join us on this exciting journey
             of self-expression, learning, and friendship.<b> Hobby Hub</b> is more than a community;
             it’s a celebration of the incredible tapestry of human creativity. Let’s create, connect, 
             and inspire together! </span></p>
-            <p> <span>🚀🌈 #HobbyHub #HobbyhubCommunity #CreativityUnleashed 🎨✨</span></p>
+            <p className="Aboutpara"> <span>🚀🌈 #HobbyHub #HobbyhubCommunity #CreativityUnleashed 🎨✨</span></p>
                        
            </div>
            <br>
@@ -55,7 +54,7 @@ const AboutUs = () => {
     <img className="MemImg" src={Memb1} alt="Eli Ugolino" />
       <div class="container">
         <h4>Eli Ugolino</h4>
-        <p class="title">Project Manager</p>
+        <p class="title">Project Coordinator</p>
         <p>eli@Hobbyhub.com</p>
       </div>
     </div>
