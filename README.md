@@ -1,3 +1,8 @@
+Hobby Hub is a full stack application that allows the user to connect with other crafters around the world to share ideas, problem solve, and find inspiration. The main objective of the app is 
+to help the user build community with those of similar interests. The user can create a profile, link  their hobbies, upload photos, follow the trending topics, and connect with other users.
+In the future we'd like the desktop version of the app to be comprised of widgets so the user can customize their experience of the application. We'd also like to see topic specific discussion boards so users can support others' crafting through sharing of wisdom, tricks of the trade, and how to problem solve out of errors. 
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
